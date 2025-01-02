@@ -78,7 +78,7 @@ function App() {
             <fieldset className="form-fieldset">
               <label>
                 <span>Chart CSV data</span>
-                <textarea name="csvData" rows={10} />
+                <textarea name="csvData" rows={10} placeholder="Please remove the CSV header from the pasted string" />
               </label>
               <label>
                 <span>Chart segments to show</span>

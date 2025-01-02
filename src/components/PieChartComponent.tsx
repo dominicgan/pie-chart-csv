@@ -26,7 +26,8 @@ const PieChartComponent: FC<PieChartComponentInterface> = ({
    * format raw data to a readable format (key, value)
    */
   const formattedData = data
-    .filter(({ field1 }) => field1 !== 'browserName') // exclude header cell
+    // TODO: remove top row for direct copy paste
+    .filter(({ field1 }) => !['browserName', 'deviceType'].includes(field1)) // exclude header cell
     .map(({ field1, field2 }) => ({
       key: field1,
       value: parseInt(field2, 10),
