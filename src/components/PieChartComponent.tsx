@@ -69,8 +69,8 @@ const PieChartComponent: FC<PieChartComponentInterface> = ({
         ]
       : chartData;
 
-  const legendData = chartData.map(({ x }) => ({
-    name: x,
+  const legendData = chartData.map(({ x }, index) => ({
+    name: `${index + 1}. ${x}`,
   }));
 
   return (

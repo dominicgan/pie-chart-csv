@@ -14,7 +14,7 @@ function App() {
     []
   );
   const [errorMsg, setErrorMsg] = useState<null | string>(null);
-  const [segmentCount, setSegmentCount] = useState(6);
+  const [segmentCount, setSegmentCount] = useState(5);
 
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -24,20 +24,6 @@ function App() {
     // clear errors on retry
     setErrorMsg(null);
 
-    /**
-     * sample data
-     * 
-     * ```csv
-       "chrome","99"
-       "firefox","25"
-       "safari","32"
-       "edge","15"
-       "huawei","1"
-       "GSA browser","1"
-       "avast","1"
-       "safari (ios)","79"
-    * ```
-     */
     try {
       if (formRef.current) {
         const formData = new FormData(formRef.current);
