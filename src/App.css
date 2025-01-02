@@ -1,0 +1,90 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.chart {
+  width: 900px;
+  display: grid;
+  /* grid-template-columns: 3fr 2fr; */
+}
+
+.chart .pie {
+  height: 400px;
+}
+
+label span {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.inputBox {
+  width: 800px;
+}
+
+.form-fieldset {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-fieldset textarea {
+  width: 100%;
+}
+
+.submitBtn {
+  background-color: royalblue;
+  color: white;
+  transition: all 0.15s linear;
+}
+
+.submitBtn:hover {
+  background-color: mediumblue;
+}
+
+.errorContainer {
+  background: crimson;
+  color: white;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
