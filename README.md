@@ -1,5 +1,7 @@
 # CSV to Pie Chart
 
+[Use it here](https://csv-to-pie-chart-mu.vercel.app/)
+
 ![screenshot](./screenshot.png)
 
 Paste your CSV and generate a pie chart! Only one configuration option:
