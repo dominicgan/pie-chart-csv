@@ -1,16 +1,16 @@
-import { useRef, useState } from "react";
-import "./App.css";
-import csv from "csvtojson";
+import { useRef, useState } from 'react';
+import './App.css';
+import csv from 'csvtojson';
 import PieChartComponent, {
   PieChartComponentInterface,
-} from "./components/PieChartComponent";
+} from './components/PieChartComponent';
 
 function isString(entry: FormDataEntryValue): entry is string {
-  return typeof entry === "string";
+  return typeof entry === 'string';
 }
 
 function App() {
-  const [pieData, setPieData] = useState<PieChartComponentInterface["data"]>(
+  const [pieData, setPieData] = useState<PieChartComponentInterface['data']>(
     []
   );
   const [errorMsg, setErrorMsg] = useState<null | string>(null);
@@ -28,15 +28,15 @@ function App() {
       if (formRef.current) {
         const formData = new FormData(formRef.current);
 
-        const csvDataRaw = formData.get("csvData");
-        const segmentValue = formData.get("segmentCount");
+        const csvDataRaw = formData.get('csvData');
+        const segmentValue = formData.get('segmentCount');
 
         if (segmentValue && isString(segmentValue)) {
           setSegmentCount(parseInt(segmentValue, 10));
         }
 
         if (!csvDataRaw) {
-          setErrorMsg("Please fill in some data");
+          setErrorMsg('Please fill in some data');
           return;
         }
 
@@ -47,7 +47,7 @@ function App() {
               setPieData(jsonObj);
             });
         } else {
-          setErrorMsg("Please enter a valid CSV value");
+          setErrorMsg('Please enter a valid CSV value');
         }
       }
     } catch (e) {
@@ -64,7 +64,11 @@ function App() {
             <fieldset className="form-fieldset">
               <label>
                 <span>Chart CSV data</span>
-                <textarea name="csvData" rows={10} placeholder="Please remove the CSV header from the pasted string" />
+                <textarea
+                  name="csvData"
+                  rows={10}
+                  placeholder="Please remove the CSV header from the pasted string"
+                />
               </label>
               <label>
                 <span>Chart segments to show</span>
