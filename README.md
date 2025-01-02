@@ -21,3 +21,17 @@ Features
 ## Screenshot
 
 ![screenshot](./screenshot.png)
+
+
+## Why?
+
+Built to simplify daily reporting visualisation for powerpoint reports! L1 operators need to collate this information and they rely on simple repetitive actions to collate information.
+
+### AWS Cloudwatch RUM
+This tool is built as a replacement gui to the AWS Cloudwatch RUM browser and device usage breakdown. Out of the box, RUM does not provide a meaningful breakdown of devices, displaying only their perceived top browser list and hiding everything else within an "Others" chunk.
+
+### Log insights custom graph
+Crafting a pie chart in log insights does not allow us to recreate this chunked "Others" data to hide the noise of low usage devices and also does not allow us to display percentage breakdowns in the legend/chart labels.
+
+### Excel
+Couldn't automatically chunk low usage devices into an "Others" data block directly.
