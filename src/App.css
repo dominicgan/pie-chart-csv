@@ -107,3 +107,36 @@ label span {
 .chart-actions button:hover {
   background-color: #666;
 }
+
+@keyframes spinnytop {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.pie-chart-icon {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: -8px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: conic-gradient(
+    #4caf50 0% 40%,
+    /* Green - 40% */ #2196f3 40% 70%,
+    /* Blue - 30% */ #ff9800 70% 85%,
+    /* Orange - 15% */ #f44336 85% 100% /* Red - 15% */
+  );
+}
+
+.pie-chart-icon:hover {
+  animation-duration: 30s;
+  animation-name: spinnytop;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}

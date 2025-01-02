@@ -56,7 +56,9 @@ function App() {
   };
   return (
     <>
-      <h1>CSV to pie chart</h1>
+      <h1>
+        <span className="pie-chart-icon" />CSV to pie chart
+      </h1>
       <p>Convert a CSV string to a pie chart.</p>
       <div className="container">
         <div className="inputBox">
