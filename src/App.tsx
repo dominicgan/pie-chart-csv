@@ -40,7 +40,6 @@ function App() {
      */
     try {
       if (formRef.current) {
-        console.log("form ref is null");
         const formData = new FormData(formRef.current);
 
         const csvDataRaw = formData.get("csvData");
@@ -49,8 +48,6 @@ function App() {
         if (segmentValue && isString(segmentValue)) {
           setSegmentCount(parseInt(segmentValue, 10));
         }
-
-        window.console.log({ csvDataRaw });
 
         if (!csvDataRaw) {
           setErrorMsg("Please fill in some data");
@@ -61,7 +58,6 @@ function App() {
           csv({ noheader: true })
             .fromString(csvDataRaw)
             .then((jsonObj) => {
-              console.log(jsonObj);
               setPieData(jsonObj);
             });
         } else {
