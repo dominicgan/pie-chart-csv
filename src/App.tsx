@@ -82,7 +82,7 @@ function App() {
             <fieldset className="form-fieldset">
               <label>
                 <span>Chart CSV data</span>
-                <textarea name="csvData" rows={15} />
+                <textarea name="csvData" rows={10} />
               </label>
               <label>
                 <span>Chart segments to show</span>
@@ -97,7 +97,7 @@ function App() {
           {errorMsg && <div className="errorContainer">{errorMsg}</div>}
 
           <button className="submitBtn" type="button" onClick={generateChart}>
-            Generate chart
+            Generate chart ⚡️
           </button>
 
           {pieData.length > 0 && (
