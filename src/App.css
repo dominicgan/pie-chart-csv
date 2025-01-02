@@ -134,7 +134,7 @@ label span {
 }
 
 .pie-chart-icon:hover {
-  animation-duration: 30s;
+  animation-duration: 60s;
   animation-name: spinnytop;
   animation-iteration-count: infinite;
   animation-direction: normal;
